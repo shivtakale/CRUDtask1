@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form CRUD </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="Stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1 class="bg-info text-white p-4">CRUD</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="font-italic text-danger">Students Form Input</h4>
+                <form id="studentForm" >
+                    <div class="form-group">
+                        <label for="fName">
+                            <strong>
+                                First Name
+                            </strong>
+                        </label>
+                        <input type="text" value="" id="fName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lName">
+                            <strong>
+                                Last Name
+                            </strong>
+                        </label>
+                        <input type="text" value="" id="lName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <strong>
+                                Email
+                            </strong>
+                        </label>
+                        <input type="text" value="" id="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">
+                            <strong>
+                                Contact
+                            </strong>
+                        </label>
+                        <input type="text" value="" id="contact" class="form-control" pattern = "^([0-9]{10,10})$" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="submit" id = 'submitBtn' class="btn btn-primary">
+                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                        <input type="button" value="update" id="updateBtn" class="btn btn-primary d-none">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <h4 class="text-success text-center">STUDENT DATA LOG</h4>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Sr.</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="stdInfo">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./assets/js/app.js"> </script>
+</body>
+</html>
